@@ -1297,10 +1297,20 @@ label{
     margin-bottom: 7px;
 }
 .inputMensaje{
-    line-height: 200px;
     width: 400px;
-    border-radius: 10px;
     border: none;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #efe9d2;
+    font-weight:500;
+    margin-bottom: 7px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 8px;
+    outline: none;
+    padding: 12px;
+    resize: none;
+    height: 70%;
+    font-family: 'Montserrat', sans-serif;
 }
 .botonSubmit{
     font-family: 'monserrat', sans-serif;
@@ -1317,6 +1327,7 @@ label{
     background-image: linear-gradient(135deg, rgb(190, 156, 81) 0%, rgb(150, 109, 56) 100%);
     border-style: none;
     overflow: visible;
+    cursor: pointer;
 }
 .formInput{
   &:required,&:invalid { box-shadow:none; }
@@ -1588,6 +1599,9 @@ label{
     overflow: visible;
 }
 @media (max-width: 576px){
+    .espacioPlanes{
+        height: 160svh;
+    }
     .pasosSus{
         display: flex;
         flex-direction: column;
@@ -1597,5 +1611,10 @@ label{
     }
     .pasosSus .paso{
         width: 80%;
+    }
+    .planes{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 70%;
     }
 }
