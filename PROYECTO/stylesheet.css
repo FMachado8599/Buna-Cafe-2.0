@@ -178,7 +178,7 @@ header{
 
 @media (max-width:1200px) {
     nav{
-        opacity: 0%;
+        display: none;
         pointer-events: none;
         width: 100px;
     }
