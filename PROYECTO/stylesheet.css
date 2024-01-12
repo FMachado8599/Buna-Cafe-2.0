@@ -46,6 +46,9 @@ h1,h2,h3{
     overflow: visible;
     font-weight: 700;
 }
+ol, ul {
+    padding-left: 2rem;
+}
 ::-webkit-scrollbar {
     width: 10px;
     opacity: 0%;
@@ -1584,5 +1587,11 @@ label{
     .pasosSus{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .pasosSus .paso{
+        width: 80%;
     }
 }
