@@ -42,23 +42,20 @@ a{
     text-decoration: none;
     overflow: visible;
 }
-/* width */
+h1,h2,h3{
+    overflow: visible;
+    font-weight: 700;
+}
 ::-webkit-scrollbar {
     width: 10px;
     opacity: 0%;
     }
-
-  /* Track */
     ::-webkit-scrollbar-track {
     background: #f1f1f1; 
     }
-
-  /* Handle */
     ::-webkit-scrollbar-thumb {
     background: #888; 
     }
-    
-  /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
     background: #555;
     opacity: 100%;
@@ -71,7 +68,6 @@ header{
     height: 10svh;
     overflow: hidden;
     align-items: center;
-
 }
 .logoBuna{
     overflow: visible;
@@ -92,7 +88,6 @@ header{
     display: flex;
     align-items: center;
     overflow: visible;
-
 }
 .barraMenu li{
     display: flex;
@@ -102,10 +97,9 @@ header{
     justify-content: center;
     overflow: visible;
     font-size: 16px;
-    height: 5svh;
+    height: 10svh;
 }
 .barraMenu li a:hover {
-    overflow: visible;
     width: 100%;
     left: 0;
     text-shadow: 0px 0px 10px #e5af5a;
@@ -118,8 +112,7 @@ header{
     overflow: visible;
 }   
 .hamburguesa{
-    opacity: 0%;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     flex-direction: column;
     background: transparent;
@@ -165,6 +158,21 @@ header{
 .hamburguesa::after div:nth-child(3){
     transform: rotate(-45deg);
 }
+.menuDesplegable{
+    background-color: #1f4437;
+}
+.offcanvas-header{
+    background-color: #e5af5a;
+}
+.btn{
+    color: transparent;
+    background-color: none;
+}
+.btnPrimary{
+    color: transparent;
+    background-color: none;
+}
+
 @media (max-width:1200px) {
     nav{
         opacity: 0%;
@@ -178,6 +186,7 @@ header{
         opacity: 100%;
         order: 1;
         width: 40px;
+        display: flex;
     }
 }
 
@@ -226,18 +235,22 @@ footer{
 }
 @media (max-width:1200px) {
     .barraMenuFooter a{
-        opacity: 0%;
+        display: none;
         pointer-events: none;
     }
+    footer{
+        height: 10svh;
+    }
+    .iconosRS a img{
+        width: 30px;
+    }
+    .iconosRS a{
+        margin-left: 1svh;
+    }
+    
 }
 /* ---------------------------INDEX------------------------------------------------------------------------------ */
 /* /////////////LANDING///////////// */
-/* .degradadoFondo{
-    z-index: -2;
-    top: 0%;
-    height: 100svh;
-
-} */
 .imagenFondoIndex{
     width: 100%;
     position: absolute;
@@ -254,7 +267,7 @@ footer{
     width: 100%;
     text-align: center;
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .imagenBunaPrincipal{
     display: flex;
     height: 800px;
@@ -285,7 +298,7 @@ footer{
     border-style: none;
     overflow: visible;
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .botonesInicio{
         font-size: 15px;
 }
@@ -299,7 +312,7 @@ footer{
     height: 90svh;
     width: 80%;
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .landing{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -333,7 +346,7 @@ footer{
 .botonesLanding button{
     margin: 0px 20px 0px 0px;
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .landing{
     min-height: 600px;
     display: flex;
@@ -344,7 +357,7 @@ footer{
         font-size: 15px;
     }
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .botonesLanding{
     display: flex;
     flex-flow: column;
@@ -352,7 +365,7 @@ footer{
     align-items: flex-start;
     }
 }
-@media ( max-width: 450px){
+@media ( max-width: 576px){
     .botonesLanding, .botonesInicio{
     margin-top: 2svh;
     }
@@ -371,7 +384,7 @@ footer{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 60px;
-    background: -webkit-linear-gradient(#eee,#999, #eee);
+    background: -webkit-linear-gradient(#efe9d2,#c6c5c1, #efe9d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -382,7 +395,6 @@ footer{
 .seccionSobreNos{
     background-image: linear-gradient(to left, #1f4437 10%,#1f4437 20%, #1f443750 70%, #1f443700 100%), url(./MULTIMEDIA/IMAGENES/cafe_restaurant.jpg);
     background-size: cover;
-    /* background-repeat: no-repeat; */
     width: 80%;
     max-width: 900px;
     height: 60svh;
@@ -486,9 +498,9 @@ footer{
     overflow: visible;
 }
 .textoPlanes button{
-    background-image: linear-gradient(135deg, #e5af5a 0%, #e5af5a 100%);
     width: fit-content;
 }
+
 .explicacionPlan{
     width: 350px;
     display: flex;
@@ -502,15 +514,6 @@ footer{
     text-transform: uppercase;
     font-weight: 500;
 }
-/* .explicacionPlan:nth-child(even){
-    text-align: left;
-    align-items: center;
-}
-.explicacionPlan:nth-child(odd){
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-} */
 .seccionPlanes:hover{
     transform: scale(1.05);
 }
@@ -595,7 +598,6 @@ footer{
 }
 .beneficios div:hover{
     border-radius: 3svh;
-    /* border: solid #2F6C55; */
     background-color: #2F6C5550;
     backdrop-filter: blur(50px);
     transform: scale(1.1);
@@ -603,9 +605,6 @@ footer{
 .beneficios div:hover p{
     opacity: 100%;
 }
-/* .beneficios img:hover{
-    transform: scale(1.05);
-} */
 /* /////////////DESCUENTOS - INDEX///////////// */
 .descuento{
 
@@ -677,9 +676,8 @@ footer{
     position: absolute;
     z-index: -2;
     top: 0%;
-    /* height: 90svh; */
-    -webkit-mask-image: linear-gradient(#1b1b1b, transparent);
-    mask-image: linear-gradient(#1b1b1b, transparent);
+    -webkit-mask-image: linear-gradient(#191919 15%, transparent);
+    mask-image: linear-gradient(#191919 15%, transparent);
     object-fit: cover;
 }
 .landingSobreNos{
@@ -731,7 +729,6 @@ footer{
 }
 .inicioAbout img{
     border-radius: 3%;
-    /* padding: 2rem; */
     width: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -821,7 +818,6 @@ footer{
 .areaVideo{
     max-width: 100%;
     object-fit: contain;
-    /* overflow: visible; */
 }
 .areaVideo .recVerde{
     position: absolute;
@@ -1122,8 +1118,7 @@ form{
 }
 label{
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: light;
     color: #1b1b1b
 }
 .formulario h3{
@@ -1131,6 +1126,7 @@ label{
     font-weight: bold;
     text-transform: uppercase;
     color: #e5af5a;
+    font-size: 16px;
 }
 .informacion h4{
     font-family: 'Open Sans', sans-serif;
@@ -1141,6 +1137,7 @@ label{
     font-family: 'Gill Sans', sans-serif;
     text-transform: uppercase;
     color: #f8f6ee;
+    font-size: 32px;
 }
 .mapa{
     width: 100%;
@@ -1160,13 +1157,14 @@ label{
 .formulario{
     width: 40%;
     height: 100%;
-    margin: 0svh 10svh 0px 0px;
-    padding: 3svh;
+    margin: 0svh 10svh 0px 20px;
+    padding: 3svh 3svh 3svh 5svh;
     border-radius: 2svh;
     background-color: rgb(47, 108, 85, 0.70);
-    box-shadow: 0px 0px 10px #2F6C55;
-    backdrop-filter: blur(20px);
-
+    backdrop-filter: blur(10px);
+    border-top: 2px solid #eeeeee50;
+    border-bottom:3px solid #00000050;
+    overflow: hidden;
 }
 .datosCliente{
     display: flex;
@@ -1192,11 +1190,159 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: start;
+    align-items: start;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 5svh;
+}
+.informacion h3,h2{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.informacion h2{
+    color: #e5af5a;
+    font-size: 32px;
+}
+.informacion h3{
+    color: #efe9d2;
+    font-size: 16px;
+}
+.informacion div{
+    display: flex;
+    padding-top: 2svh;
+    gap: 15px;
+}
+.informacion div img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 label{
     color: #F8F6EE;
 }
+.formGrupo {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.formInput {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color:white ;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .formLabel {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #efe9d2;
+}
+
+.formInput:focus {
+  ~ .formLabel {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #e5af5a;
+    font-weight:200;
+}
+  padding-bottom: 6px;  
+  font-weight: 200;
+  border-width: 3px; 
+  border-image: linear-gradient(to right, #e5af5a, #966d38 );
+  border-image-slice: 1;
+}
+.formMensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 36svh;
+}
+.formMensaje label{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #efe9d2;
+    font-weight:200;
+    margin-bottom: 7px;
+}
+.inputMensaje{
+    line-height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+}
+.botonSubmit{
+    font-family: 'monserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    --tw-text-opacity: 1;
+    color: #fff;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    background-image: linear-gradient(135deg, rgb(190, 156, 81) 0%, rgb(150, 109, 56) 100%);
+    border-style: none;
+    overflow: visible;
+}
+.formInput{
+  &:required,&:invalid { box-shadow:none; }
+}
+
 /* ------------------------------------------------------PRODUCTOS----------------------------------------------------------------- */
+.imgHeading{
+    width: 100%;
+    height: 30svh;
+    object-fit: contain;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-image:   url(./MULTIMEDIA/IMAGENES/empaquetado_1.jpg);
+}
+.contHeading{
+    display: flex;
+    top: 10svh;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 30svh;
+}
+.tituloProductos{
+    position: absolute;
+    font-size: 70px;
+    top: 10svh;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #e5af5a;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 30px #e5af5a;
+    overflow: visible;
+}
 .productos{
     width: 90%;
     display: grid;
@@ -1245,7 +1391,7 @@ label{
 .producto2, .producto3, .producto5, .producto6{
     border-radius: 2vh;
 }
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .productos{
         width: 90%;
         display: flex;
@@ -1256,26 +1402,6 @@ label{
         width: 100%;
         height: 100%;
     }
-    /* .producto1{
-        border-radius: 3vh;
-    }
-    .producto2{
-    }
-    .producto3{
-    }
-    .producto4{
-        border-radius: 3vh;
-    }
-    .producto5{
-    }
-    .producto6{
-    }
-    .producto1, .producto4{
-        object-fit: cover;
-    }
-    .producto2, .producto3, .producto5, .producto6{
-        border-radius: 2vh;
-    } */
 }
 /* ------------------------------------------------------SUSCRIPCIONES----------------------------------------------------------------- */
 .landingSuscripciones{
@@ -1290,7 +1416,10 @@ label{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-top: 10%;
+    gap: 20px;
+    width: 80%;
 }
 .tituloPlan{
     font-family: 'Montserrat', sans-serif;
@@ -1298,8 +1427,10 @@ label{
     font-size: 24px;
     color: #efe9d2;
     text-shadow: 0px 0px 10px #2F6C55;
-    height: 5svh;
+    height: fit-content;
     text-align: center;  
+    min-height: 60px;
+    text-align: center;
 }
 .paso{
     width: 30%;
@@ -1313,15 +1444,19 @@ label{
     object-fit: contain;   
     height: 75px;
     width: 75px;
-    min-width: 75px;
+}
+.ventajasPlanes{
+    height: 50svh;
+    width: 80%;display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 }
 .tituloSuscripciones{
-    margin-top: 10%;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10%;
     font-family: 'Montserrat', sans-serif;
     font-size: 3pc;
     color: #efe9d2;
@@ -1331,25 +1466,52 @@ label{
 }
 .listaVentajas{
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
-}
-.puntosVentajas{
+    align-items: start;
     text-transform: uppercase;
-    font-family: Monserrat;
+    font-family: 'Monserrat',sans-serif;
     color: #f8f6ee;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: disc;
+}
+.ventajasPlanes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.espacioPlanes{
+    width: 100%;
+    z-index: -2;
+    top: 100svh;
+    height: 100svh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .planes{
-    margin: 5%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3svh;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
 }
 .nombresPlanes{
     font-family: 'Open Sans', sans-serif;
-    font-size: small;
+    font-size: 14px;
     font-weight: 300;
     color: #efe9d2;
+    overflow: visible;
+    text-align: start;
 }
 .listaCaracteristicas{
     color: #f8f6ee;
@@ -1359,28 +1521,33 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding-bottom: 100px;
     list-style-position: inside;
-
+    overflow: visible;
 }
 .precio{
-    display: flex;
-    padding-top: 1pc;
-    padding-bottom: 1pc;
+    padding: 10px 0 10px 0;
+    text-shadow: 2px 2px 3px #19191970;
 }
 .cajaPlanes{
-    padding: 10px;
+    padding: 5%;
     height: 300px;
-    border-style: solid;
+    border-top: 2px solid white;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 250px;
+    width: 200px;
     min-height: 300px;
+    justify-content: space-between;
+    background-image: linear-gradient(#e5af5a95, #966d3895);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px #191919;
+}
+.cajaPlanes:hover{
+    scale: 110%;
 }
 .cajaPlanes .botonEmpezar,.botonPlus,.botonPremium{
-    max-width: 200px;
+    width: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1391,20 +1558,31 @@ label{
     padding-top: 0.75rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 16px;
     --tw-text-opacity: 1;
     color: #fff;
     color: rgb(255 255 255/var(--tw-text-opacity));
     border: none;
     box-shadow: 2px 2px 6px #191919;
 }
+.cajaPlanes button:hover{
+
+}
 .cajaPlanes .botonEmpezar{
-    background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
+    background-image: linear-gradient(135deg, rgb(190, 156, 81) 0%, rgb(150, 109, 56) 100%);
+    overflow: visible;
 }
 .cajaPlanes .botonPlus{
-    background-image: linear-gradient(135deg, rgb(47, 108, 85) 0%, rgb(31, 68, 55) 100%);
+    background-image: linear-gradient(135deg, rgb(190, 156, 81) 0%, rgb(150, 109, 56) 100%);
+    overflow: visible;
 }
 .cajaPlanes .botonPremium{
     background-image: linear-gradient(135deg, rgb(190, 156, 81) 0%, rgb(150, 109, 56) 100%);
+    overflow: visible;
 }
-
+@media (max-width: 576px){
+    .pasosSus{
+        display: flex;
+        flex-direction: column;
+    }
+}
